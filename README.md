@@ -12,7 +12,7 @@ When you switch between two carousels, the old one doesn't fade out. It keeps ru
 ## Install
 
 ```sh
-npm i @madebymaga/carousels gsap
+npm i madebymaga-carousels gsap
 ```
 
 ## Quick start
@@ -22,8 +22,8 @@ npm i @madebymaga/carousels gsap
 ```
 
 ```js
-import { createCarousel } from '@madebymaga/carousels'
-import '@madebymaga/carousels/style.css'
+import { createCarousel } from 'madebymaga-carousels'
+import 'madebymaga-carousels/style.css'
 
 const carousel = createCarousel('#stage', {
   layout: 'drift',
@@ -91,7 +91,7 @@ off()
 Every layout places a card on the same grid. That shared grid is why any two layouts can morph into each other.
 
 ```js
-import { createCarousel, P0 } from '@madebymaga/carousels'
+import { createCarousel, P0 } from 'madebymaga-carousels'
 
 const line = {
   name: 'line',

@@ -1,5 +1,5 @@
 {
-  "name": "@madebymaga/carousels",
+  "name": "madebymaga-carousels",
   "version": "0.1.0",
   "description": "Three carousels that morph into each other: Drift, Orbit and Fan. GSAP, no framework.",
   "type": "module",
