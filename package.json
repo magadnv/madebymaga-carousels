@@ -1,0 +1,41 @@
+{
+  "name": "@madebymaga/carousels",
+  "version": "0.1.0",
+  "description": "Three carousels that morph into each other: Drift, Orbit and Fan. GSAP, no framework.",
+  "type": "module",
+  "main": "./dist/carousels.js",
+  "module": "./dist/carousels.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/carousels.js"
+    },
+    "./style.css": "./dist/carousels.css"
+  },
+  "files": ["dist", "types"],
+  "sideEffects": ["*.css"],
+  "scripts": {
+    "dev": "vite demo --port 5720",
+    "build": "vite build",
+    "build:demo": "vite build demo",
+    "test": "vitest run",
+    "check": "npm test && npm run build && npm pack --dry-run",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "peerDependencies": {
+    "gsap": "^3.12.0"
+  },
+  "devDependencies": {
+    "gsap": "3.15.0",
+    "jsdom": "^31.0.1",
+    "vite": "8.3.5",
+    "vitest": "^5.1.0"
+  },
+  "keywords": ["carousel", "slider", "gsap", "3d", "animation", "gallery", "morph", "vanilla"],
+  "author": "madebymaga (https://madebymaga.de)",
+  "license": "MIT",
+  "homepage": "https://carousel-six-beta.vercel.app",
+  "repository": { "type": "git", "url": "git+https://github.com/magadnv/madebymaga-carousels.git" },
+  "bugs": "https://github.com/magadnv/madebymaga-carousels/issues"
+}

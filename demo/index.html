@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carousels - madebymaga</title>
+    <meta name="description" content="A growing collection of carousel animations by madebymaga." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Kritisches CSS: kein Aufblitzen beim Neuladen */
+      html, body { margin: 0; background: #fbfbf9; height: 100%; overflow: hidden; }
+      html:not(.is-ready) .ui, html:not(.is-ready) .stage { visibility: hidden; }
+      .loader { position: fixed; inset: 0; display: grid; place-items: center; background: #fbfbf9; z-index: 50; }
+      .loader img { width: 28px; height: 28px; opacity: 0; animation: lm 1.4s ease-in-out infinite alternate; }
+      @keyframes lm { to { opacity: 1; } }
+    </style>
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true"><img src="/favicon.svg?v=2" alt="" /></div>
+
+    <main class="stage"></main>
+
+    <header class="ui corner tl">
+      <img class="logo" src="/favicon.svg?v=2" alt="madebymaga" />
+      <div>
+        <div class="brand">Carousels</div>
+        <div class="meta">A collection in motion</div>
+        <a class="meta source" href="https://github.com/magadnv/madebymaga-carousels" target="_blank" rel="noopener">Open source on GitHub</a>
+      </div>
+    </header>
+
+    <div class="ui corner tr">
+      <div class="meta"><span class="mask"><span data-slot="num">N° 01</span></span> / 03</div>
+      <div class="name"><span class="mask"><span data-slot="name">Drift</span></span></div>
+    </div>
+
+    <div class="ui corner bl">
+      <div class="meta"><span class="mask"><span data-slot="index">01</span></span> / <span class="mask"><span data-slot="total">06</span></span></div>
+      <div class="caption"><span class="mask"><span data-slot="caption">Upward</span></span></div>
+    </div>
+
+    <div class="ui corner br">
+      <div class="meta hint"><span class="mask"><span data-slot="hint">Drag, scroll or hold</span></span></div>
+      <div class="meta muted">Photos Unsplash, Pinterest</div>
+    </div>
+
+    <nav class="ui nav" aria-label="Carousels">
+      <span role="link" tabindex="0" data-go="0">01</span>
+      <span role="link" tabindex="0" data-go="1">02</span>
+      <span role="link" tabindex="0" data-go="2">03</span>
+    </nav>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

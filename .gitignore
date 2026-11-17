@@ -1,0 +1,7 @@
+node_modules
+dist
+demo/dist
+.vercel
+.DS_Store
+# Demo photos are not part of the repo: they belong to their photographers
+demo/public/img
