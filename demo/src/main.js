@@ -154,6 +154,25 @@ addEventListener('keydown', (e) => {
 })
 navItems.forEach((el) => el.addEventListener('click', () => go(Number(el.dataset.go))))
 
+// install line: click copies, the line confirms briefly
+const install = document.querySelector('.install')
+const copyInstall = async () => {
+  const text = 'npm i madebymaga-carousels'
+  try {
+    await navigator.clipboard.writeText(text)
+    install.textContent = 'Copied'
+  } catch {
+    return
+  }
+  install.classList.add('is-copied')
+  setTimeout(() => {
+    install.textContent = text
+    install.classList.remove('is-copied')
+  }, 1400)
+}
+install.addEventListener('click', copyInstall)
+install.addEventListener('keydown', (e) => e.key === 'Enter' && copyInstall())
+
 /* ---------- load everything first, then show ---------- */
 async function boot() {
   const imgs = Object.keys(SETS).flatMap((set) =>

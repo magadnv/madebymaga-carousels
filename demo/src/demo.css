@@ -139,3 +139,16 @@ body {
   transition: background-size 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease;
 }
 .source:hover { color: var(--red); background-size: 100% 1px; }
+
+/* Installationszeile, Klick kopiert */
+.install {
+  margin-top: 4px;
+  pointer-events: auto;
+  cursor: pointer;
+  text-transform: none;
+  transition: color 0.3s ease;
+  outline: none;
+}
+.install:hover,
+.install:focus-visible { color: var(--ink); }
+.install.is-copied { color: var(--red); }

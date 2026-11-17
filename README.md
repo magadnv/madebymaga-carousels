@@ -1,5 +1,7 @@
 # Carousels
 
+[![npm](https://img.shields.io/npm/v/madebymaga-carousels?color=cf1830)](https://www.npmjs.com/package/madebymaga-carousels) [![test](https://github.com/magadnv/madebymaga-carousels/actions/workflows/test.yml/badge.svg)](https://github.com/magadnv/madebymaga-carousels/actions/workflows/test.yml) ![gzip](https://img.shields.io/bundlephobia/minzip/madebymaga-carousels)
+
 Three carousels that morph into each other: **Drift**, **Orbit** and **Fan**.
 GSAP, no framework, 6.6 kB gzipped.
 
